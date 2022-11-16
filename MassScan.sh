@@ -9,7 +9,7 @@ function help(){
 
 function portscan(){
 	echo -e "\n====================================================\n"
-	read -p "Enter port to be Scanned :" prt
+	read -p "Enter port to be Scanned : " prt
 	echo -e "\n====================================================\n"
 	while read -r line;
 	do

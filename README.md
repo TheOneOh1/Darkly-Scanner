@@ -1,10 +1,8 @@
-# Darkly-Scanner
+# Darkly-Scanner    ![](https://img.shields.io/github/stars/TheOneOh1/Darkly-Scanner)
 
 - Simple Tool to TCP scan a specific port for multiple Domains/IP Addresses at once.
 - Script accepts a file as input with Domains and also checks if the domain is valid or not
 - Most useful in cases where you are enumerating multiple subdomains at once.
-
-![](https://img.shields.io/github/stars/TheOneOh1/Darkly-Scanner)
 
 -------------------------------------------------------------------------------------------
 

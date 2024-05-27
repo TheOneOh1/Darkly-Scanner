@@ -3,17 +3,8 @@
 - Simple Tool to TCP scan a specific port for multiple Domains/IP Addresses at once.
 - Script accepts a file as input with Domains and also checks if the domain is valid or not
 - Most useful in cases where you are enumerating multiple subdomains at once.
-
--------------------------------------------------------------------------------------------
-
-### Prerequesites
-
-- Make sure to install Host and nmap using..
-
-```
-apt install host                  --> To check if Domain is valid or not
-apt install nmap                  --> For Port Scanning
-```
+- This will check whether you have the required dependencies, if not, it will install it for you.
+ 
 -------------------------------------------------------------------------------------------
 
 ### How to use?
@@ -24,7 +15,6 @@ apt install nmap                  --> For Port Scanning
 
 ```
 bash <script.sh> -f <filename>
-
 
 -f : Input File
 -h : Help Page

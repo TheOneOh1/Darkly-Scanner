@@ -8,7 +8,7 @@ function help(){
 }
 
 function check(){
-        nmap -v &> /dev/nall
+        nmap -v &> /dev/null
         if [ "$?" != "0" ];then
                 echo "Nmap is not installed, we will install it for you."
                 apt install nmap -y &> /dev/null

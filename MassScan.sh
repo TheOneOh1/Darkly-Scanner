@@ -7,10 +7,29 @@ function help(){
 	echo -e "\n===================================================="
 }
 
+function check(){
+        nmap -v &> /dev/nall
+        if [ "$?" != "0" ];then
+                echo "Nmap is not installed, we will install it for you."
+                apt install nmap -y &> /dev/null
+                echo "Nmap has been installed"
+        else
+                echo "Nmap Available"
+        fi
+        which host &> /dev/null
+        if [ "$?" != "0" ];then
+                echo "Host is not installed, we will install it for you."
+                apt install host -y &>/dev/null
+                echo "Host has been installed"
+        else
+                echo "Host Available"
+        fi
+}
+
 function portscan(){
-	echo -e "\n====================================================\n"
-	read -p "Enter port to be Scanned : " prt
-	echo -e "\n====================================================\n"
+        echo -e "\n-----------------------------------"
+        read -p "Enter port to be Scanned : " prt
+        echo -e "-----------------------------------\n"
 	while read -r line;
 	do
 		host $line &> /dev/null
@@ -33,7 +52,8 @@ while getopts "f:h:" opt;
 do
 	case $opt in
 		f)
-			portscan
+			check
+   			portscan
 			;;
 		h)
 			help
